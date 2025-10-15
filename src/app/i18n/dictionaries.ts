@@ -27,6 +27,8 @@ export type Dictionary = {
     };
     editingTools: string;
     languages: string;
+    portfolio: { title: string; items: { label: string; href: string }[] };
+    details: { title: string; items: { text: string; href?: string }[] };
   };
   switcher: { label: string; es: string; en: string };
 };
@@ -86,6 +88,25 @@ const dictionaries: Record<Lang, Dictionary> = {
       },
       editingTools: "Herramientas de edición",
       languages: "Idiomas",
+      portfolio: {
+        title: "Portfolio",
+        items: [
+          { label: "Bento", href: "#" },
+          { label: "Behance", href: "#" },
+          { label: "Instagram", href: "#" },
+          { label: "YouTube", href: "#" },
+          { label: "Dribbble", href: "#" }
+        ]
+      },
+      details: {
+        title: "Detalles",
+        items: [
+          { text: "👨🏻‍💻 26 años" },
+          { text: "🔗 iamsunilfreelancer.com", href: "https://iamsunilfreelancer.com" },
+          { text: "📞 +91 9899052055", href: "tel:+919899052055" },
+          { text: "🇮🇳 India" }
+        ]
+      }
     },
     switcher: { label: "Idioma", es: "Español", en: "Inglés" },
   },
@@ -143,6 +164,25 @@ const dictionaries: Record<Lang, Dictionary> = {
       },
       editingTools: "Editing Tools",
       languages: "Languages",
+      portfolio: {
+        title: "Portfolio",
+        items: [
+          { label: "Bento", href: "#" },
+          { label: "Behance", href: "#" },
+          { label: "Instagram", href: "#" },
+          { label: "YouTube", href: "#" },
+          { label: "Dribbble", href: "#" }
+        ]
+      },
+      details: {
+        title: "Details",
+        items: [
+          { text: "👨🏻‍💻 26 years" },
+          { text: "🔗 iamsunilfreelancer.com", href: "https://iamsunilfreelancer.com" },
+          { text: "📞 +91 9899052055", href: "tel:+919899052055" },
+          { text: "🇮🇳 India" }
+        ]
+      }
     },
     switcher: { label: "Language", es: "Spanish", en: "English" },
   },
