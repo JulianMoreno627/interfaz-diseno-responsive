@@ -12,8 +12,9 @@ export default function Portfolio({ dict }: { dict: Dictionary }) {
           <Link
             key={item.label}
             href={item.href}
-            className="inline-flex items-center px-4 py-2 rounded-lg bg-[color:var(--foreground)]/10 text-cardtext text-xs md:text-sm hover:bg-[color:var(--foreground)]/20 transition-colors w-full sm:w-auto"
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-[color:var(--foreground)]/10 text-cardtext text-xs md:text-sm hover:bg-[color:var(--foreground)]/20 transition-colors w-full sm:w-auto"
           >
+            <span className="text-base">{item.icon}</span>
             {item.label}
           </Link>
         ))}

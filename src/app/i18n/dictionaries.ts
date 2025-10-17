@@ -27,8 +27,8 @@ export type Dictionary = {
     };
     editingTools: string;
     languages: string;
-    portfolio: { title: string; items: { label: string; href: string }[] };
-    details: { title: string; items: { text: string; href?: string }[] };
+    portfolio: { title: string; items: { label: string; href: string; icon: string }[] };
+    details: { title: string; items: { text: string; href?: string; icon: string }[] };
   };
   switcher: { label: string; es: string; en: string };
 };
@@ -91,20 +91,20 @@ const dictionaries: Record<Lang, Dictionary> = {
       portfolio: {
         title: "Portfolio",
         items: [
-          { label: "Bento", href: "#" },
-          { label: "Behance", href: "#" },
-          { label: "Instagram", href: "#" },
-          { label: "YouTube", href: "#" },
-          { label: "Dribbble", href: "#" }
+          { label: "Bento", href: "#", icon: "🎨" },
+          { label: "Behance", href: "#", icon: "🅱️" },
+          { label: "Instagram", href: "#", icon: "📷" },
+          { label: "YouTube", href: "#", icon: "▶️" },
+          { label: "Dribbble", href: "#", icon: "🏀" }
         ]
       },
       details: {
         title: "Detalles",
         items: [
-          { text: "👨🏻‍💻 26 años" },
-          { text: "🔗 iamsunilfreelancer.com", href: "https://iamsunilfreelancer.com" },
-          { text: "📞 +91 9899052055", href: "tel:+919899052055" },
-          { text: "🇮🇳 India" }
+          { text: "26 años", icon: "👨🏻‍💻" },
+          { text: "iamsunilfreelancer.com", href: "https://iamsunilfreelancer.com", icon: "🔗" },
+          { text: "+91 9899052055", href: "tel:+919899052055", icon: "📞" },
+          { text: "India", icon: "🇮🇳" }
         ]
       }
     },
@@ -167,20 +167,20 @@ const dictionaries: Record<Lang, Dictionary> = {
       portfolio: {
         title: "Portfolio",
         items: [
-          { label: "Bento", href: "#" },
-          { label: "Behance", href: "#" },
-          { label: "Instagram", href: "#" },
-          { label: "YouTube", href: "#" },
-          { label: "Dribbble", href: "#" }
+          { label: "Bento", href: "#", icon: "🎨" },
+          { label: "Behance", href: "#", icon: "🅱️" },
+          { label: "Instagram", href: "#", icon: "📷" },
+          { label: "YouTube", href: "#", icon: "▶️" },
+          { label: "Dribbble", href: "#", icon: "🏀" }
         ]
       },
       details: {
         title: "Details",
         items: [
-          { text: "👨🏻‍💻 26 years" },
-          { text: "🔗 iamsunilfreelancer.com", href: "https://iamsunilfreelancer.com" },
-          { text: "📞 +91 9899052055", href: "tel:+919899052055" },
-          { text: "🇮🇳 India" }
+          { text: "26 years", icon: "👨🏻‍💻" },
+          { text: "iamsunilfreelancer.com", href: "https://iamsunilfreelancer.com", icon: "🔗" },
+          { text: "+91 9899052055", href: "tel:+919899052055", icon: "📞" },
+          { text: "India", icon: "🇮🇳" }
         ]
       }
     },

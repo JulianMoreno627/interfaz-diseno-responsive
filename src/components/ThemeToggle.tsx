@@ -6,7 +6,6 @@ function getInitialTheme(): "light" | "dark" {
   if (typeof window === "undefined") return "dark";
   const saved = localStorage.getItem("theme-preference");
   if (saved === "light" || saved === "dark") return saved;
-  // Fallback to system preference
   const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
   return prefersDark ? "dark" : "light";
 }
@@ -16,7 +15,6 @@ export default function ThemeToggle() {
 
   useEffect(() => {
     const el = document.documentElement;
-    // Remove both classes then add the current one
     el.classList.remove("theme-dark", "theme-light");
     el.classList.add(theme === "dark" ? "theme-dark" : "theme-light");
     localStorage.setItem("theme-preference", theme);
@@ -25,7 +23,11 @@ export default function ThemeToggle() {
   return (
     <button
       aria-label="Toggle color theme"
-      className="fixed top-6 right-28 z-50 px-3 py-2 rounded-lg text-sm font-bold bg-background text-white border border-grey hover:bg-white/10 transition-colors"
+      className={`fixed top-6 right-48 z-50 px-3 py-2 rounded-lg text-sm font-bold border transition-colors ${
+        theme === "dark"
+          ? "bg-[#1a1a1a] text-white border-grey hover:bg-white/10"
+          : "bg-white text-black border-gray-300 hover:bg-gray-100"
+      }`}
       onClick={() => setTheme((t) => (t === "dark" ? "light" : "dark"))}
     >
       {theme === "dark" ? "🌙 Dark" : "☀️ Light"}

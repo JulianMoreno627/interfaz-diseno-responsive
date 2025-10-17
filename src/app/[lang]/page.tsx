@@ -2,6 +2,7 @@ import Image from "next/image";
 import { getDictionary } from "../i18n/dictionaries";
 import { Lang, languages } from "../i18n/config";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
+import ThemeToggle from "@/components/ThemeToggle";
 import Portfolio from "@/components/sections/Portfolio";
 import Details from "@/components/sections/Details";
 
@@ -19,14 +20,15 @@ export default async function Home({
 
   return (
     <div className="font-sans flex justify-center">
+      <ThemeToggle />
       <LanguageSwitcher currentLang={lang} />
       <main className="grid grid-cols-12 container mt-20 gap-10">
-        {/* Avatar: responsive sizes */}
+
         <span className="flex items-center justify-center col-span-12 md:col-span-3 md:row-span-2 bg-white rounded-2xl overflow-hidden relative">
           <Image src="/avatar.jpg" alt="avatar" width={600} height={600} className="w-full h-auto md:w-[300px]" />
-          {/* Overlay light chips over photo on small screens */}
+
           <div className="absolute inset-x-4 bottom-4 flex flex-wrap gap-2 md:hidden">
-            {/* a couple of light chips from details to show over photo */}
+
             {dict.sections.details.items.slice(0, 3).map((item, idx) => (
               <span key={idx} className="px-3 py-1 rounded-lg bg-card text-cardtext text-xs shadow-sm">
                 {item.text}
@@ -182,7 +184,7 @@ export default async function Home({
           <li className="text-xl font-bold border-r pr-4">
             {dict.sections.languages}
           </li>
-          <li className="text-4xl">🇧🇴</li>
+          <li className="text-4xl">🇮🇳</li>
           <li className="text-4xl">🇬🇧</li>
           <li className="text-4xl">🇺🇸</li>
         </ul>

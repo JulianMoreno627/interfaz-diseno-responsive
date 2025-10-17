@@ -28,22 +28,24 @@
 body {
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+  transition: background 0.3s ease;
 }
-/* Manual theme override classes */
+
+
 html.theme-dark {
   --background: #000000;
-  --foreground: #1d1d1d;
-  --grey: #757575;
-  /* Dark cards */
+  --foreground: #ffffff;
+  --grey: #9ca3af;
+
   --card-bg: #1d1d1d;
   --card-text: #ffffff;
 }
 
 html.theme-light {
-  --background: #ffffff;
+  --background: #f5f5f5;
   --foreground: #1d1d1d;
   --grey: #757575;
-  /* Light cards */
+
   --card-bg: #ffffff;
-  --card-text: #000000;
+  --card-text: #1d1d1d;
 }
